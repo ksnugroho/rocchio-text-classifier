@@ -1,0 +1,50 @@
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Klasifikasi Surat Warga</title>
+    <link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap/css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='fonts/font-awesome-4.7.0/css/font-awesome.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/util.css') }}">
+</head>
+
+<body>
+    <div class="limiter">
+        <div class="container-login100">
+            <div class="wrap-login100">
+                <div class="login100-form-title" style="background-image: url(/static/images/bg-01.jpg);">
+                    <span class="login100-form-title-1">
+                        Hasil Klasifikasi SKPD Tujuan<br>Surat Terbuka
+                    </span>
+                </div>
+                <br>
+                <dl class="row" style="margin: 15px;">
+                    <dt class="col-sm-3"><b>Nama Lengkap</b></dt>
+                    <dd class="col-sm-9">{{ name }}</dd>
+
+                    <dt class="col-sm-3"><b>Isi Surat</b></dt>
+                    <dd class="col-sm-9" style="text-align: justify;">{{ message }}</dd>
+
+                    <dt class="col-sm-3"><b>SKPD Tujuan</b></dt>
+                    <dd class="col-sm-9">{{ result }}</dd>
+                </dl>
+
+                <br>
+                <div class="d-flex justify-content-center">
+                    <a class="login100-form-btn" name="send" type="submit" href="{{ url_for('index') }}">
+                        <i class="fa fa-arrow-left" aria-hidden="true"></i>&nbsp;Kembali
+                    </a>
+                </div><br>
+            </div>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='jquery/jquery-3.2.1.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='bootstrap/js/bootstrap.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+
+</html>

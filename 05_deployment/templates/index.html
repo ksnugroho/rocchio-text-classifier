@@ -1,0 +1,56 @@
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Klasifikasi Surat Warga</title>
+    <link rel="icon" href="{{ url_for('static', filename='images/icons/favicon.ico') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap/css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='fonts/font-awesome-4.7.0/css/font-awesome.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/util.css') }}">
+</head>
+
+<body>
+    <div class="limiter">
+        <div class="container-login100">
+            <div class="wrap-login100">
+                <div class="login100-form-title" style="background-image: url(/static/images/bg-01.jpg);">
+                    <span class="login100-form-title-1">
+                        Kirim Surat Terbuka Ke <br> SKPD Pemerintah Kota Malang
+                    </span>
+                </div>
+                <p class="d-flex justify-content-center" style="margin-top: 5px;">sdsds</p>
+
+                <form class="login100-form validate-form" action="{{ url_for('predict')}}" method="POST">
+                    <div class="wrap-input100 validate-input m-b-26" data-validate="
+                    Nama harus diisi">
+                        <span class="label-input100">Nama Lengkap</span>
+                        <input class="input100" type="text" name="name" placeholder="Masukkan nama lengkap anda">
+                        <span class="focus-input100"></span>
+                    </div>
+
+                    <div class="wrap-input100 validate-input m-b-18" data-validate="
+                    Isi surat harus diisi">
+                        <span class="label-input100">Isi Surat</span>
+                        <textarea rows="10" class="input100" type="text" name="ticket"
+                            placeholder="Masukkan isi surat anda"></textarea>
+                        <span class="focus-input100"></span>
+                    </div>
+
+                    <div class="container-login100-form-btn">
+                        <button class="login100-form-btn" name="send" type="submit">
+                            <i class="fa fa-paper-plane" aria-hidden="true"></i>&nbsp;Kirim Surat
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='jquery/jquery-3.2.1.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='bootstrap/js/bootstrap.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+
+</html>

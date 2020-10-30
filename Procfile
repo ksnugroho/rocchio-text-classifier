@@ -1,0 +1,1 @@
+web: gunicorn 05_deployment.app:app --reload --bind 0.0.0.0:$PORT
