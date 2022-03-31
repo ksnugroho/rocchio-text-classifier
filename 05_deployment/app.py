@@ -11,6 +11,8 @@ from nltk.tokenize import sent_tokenize, word_tokenize
 from nltk.corpus import stopwords
 from Sastrawi.Stemmer.StemmerFactory import StemmerFactory
 
+nltk.download('stopwords')
+
 from flask import Flask, request, render_template
 
 THIS_FOLDER = os.path.dirname(os.path.abspath(__file__))
